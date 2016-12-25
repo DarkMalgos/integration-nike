@@ -1,0 +1,558 @@
+/*--
+==========================================================================
+#title            : Exercise 6: Integration NIKE
+#description      :  HTML/CSS/JAVASCRIPT/JQUERY
+#author           : SAUMUROT Florian
+#date             : 20161212
+#version          : Constantly on progress
+#usage            : HTML
+#notes            : Only working on search engine
+============================================================================--*/
+
+body {
+    margin: 0;
+    padding: 0;
+    border: #c8cfdc solid 50px;
+}
+
+@font-faces{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background: white;
+    position: relative;
+    font-family: 'Roboto Condensed';
+    
+    z-index: 3;
+}
+
+#logo {
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+#left {
+    list-style: none;
+    margin: 0;
+    margin-left: 79px;
+    float: left;
+}
+
+#left li {
+    display: inline-block;
+    
+    font-size: 10px;
+    font-weight: bold;
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    padding-right: 40px;
+    
+}
+
+#left li a {
+    text-decoration: none;
+    color: black;
+}
+
+#left li a:hover {
+    text-decoration: none;
+    color: #0099cc;
+    border-bottom: 4px solid #0099cc;
+    padding-bottom: 36px;
+}
+
+#right {
+    list-style: none;
+    margin: 0;
+    float: right;
+}
+
+#right li {
+    display: inline-block;
+    
+    font-size: 10px;
+    font-weight: bold;
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    padding-right: 40px;
+} 
+
+#right li img {
+    top 38px;
+    position: absolute;
+    
+    margin-right: 40px;
+}
+
+#right li a {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+
+#right li a:hover {
+    color: #0099cc;
+}
+
+#product-view{
+    width: 100%;
+    height: 610px;
+    position: relative;
+    
+    background: white;
+    
+    z-index: 3;
+}
+
+#product-left {
+    width: 638px;
+    height: 296px;
+    
+    position: absolute;
+    
+    top: 157px;
+    left: 122px;
+    
+    background: url("../images/top-background-1.png");
+}
+#product-right {
+    width: 300px;
+    height: 430px;
+    
+    top: 59px;
+    left: 851px;
+    position: absolute;
+}
+
+#heart {
+    padding: 17px 16px;
+    border: #cccccc solid 1px;
+    margin-bottom: 0;
+}
+
+#mark {
+    margin-top: 43px;
+    margin-bottom: 0;
+    padding: 0;
+    
+    font-size: 17px;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+#model {
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding: 0;
+    
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+#price {
+    margin-top: 13px;
+    margin-bottom: 0;
+    padding: 0;
+    
+    font-size: 16px;
+    color: #666666;
+    font-family: 'Roboto';
+    font-weight: bold;
+
+}
+
+#color {
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding: 0;
+    
+    font-size: 11px;
+    color: #666666;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+#color span {
+    color: #0099cc;
+}
+
+#color a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0099cc;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+#m1, #m2 {
+    height: 80px;
+    width: 80px;
+        
+    margin-top: 14px;
+    margin-bottom: 0;
+    
+    border: none;
+}
+
+#m1 {
+    background: url("../images/top-1.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+#m2 {
+    background: url("../images/top-2.png") center no-repeat;
+    background-size: 100% 100%;
+    padding-left: 10px;
+}
+
+#size-chart {
+    margin-top: 20px;
+    margin-bottom: 0;
+    
+    color: #666666;
+    font-family: 'Roboto';
+    font-size: 9px;
+}
+
+#product-right select {
+    width: 125px;
+    height: 50px;
+    
+    margin-top: 15px;
+    margin-bottom: 0;
+    
+    border: #cccccc solid 1px;
+    
+    color: #666666;
+    font-family: 'Roboto';
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#add1 {
+    width: 125px;
+    height: 50px;
+    
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    
+    background: #333333;
+    border: none;
+    
+}
+
+#zone-fixed {
+    width: 100%;
+    height: 1320px;
+}
+
+#middle {
+    width: 100%;
+    height: 660px;
+    
+    background: url("../images/middle.png") center no-repeat;
+    
+    position: relative;
+    
+    z-index: 1;
+}
+
+#middle-title {
+    position: absolute;
+    top: 261px;
+    left: 51px;
+    
+    font-family: 'Roboto Condensed';
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+#middle-text {
+    position: absolute;
+    top: 309px;
+    left: 51px;
+    
+    width: 295px;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: white;
+}
+
+#fix-pannel {
+    width: 292px;
+    height: 422px;
+    
+    border: solid 4px #e4e4e4;
+    
+    background: white;
+    
+    position: fixed;
+    top: 118px;
+    right: 70px;
+    
+    float: right;
+    
+    z-index: 2;
+}
+
+#fix-pannel #mark-pannel {
+    padding-left: 26px;
+    padding-top: 21px;
+    margin: 0;
+    
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#fix-pannel #model-pannel {
+    padding-top: 14px;
+    padding-left: 26px;
+    margin: 0;
+    
+    font-family: 'Roboto';
+    font-size: 10px;
+    color: #999999;
+}
+
+#fix-pannel #color-pannel {
+    padding-top: 20px;
+    padding-left: 26px;
+    margin: 0;
+    
+    font-family: 'Roboto';
+    font-size: 10px;
+    color: #0099cc;
+    font-weight: bold;
+}
+
+#fix-pannel #color-pannel a{
+    display: inline-block;
+    font-size: 10px;
+    color: #0099cc;
+    text-decoration: none;
+    padding: 0;
+}
+
+#fix-pannel #shoe-pannel {
+    margin-top: 51px;
+    margin-left: 30px;
+    padding: 0;
+    margin-bottom: 0;
+    
+    width: 229px;
+    height: 122px;
+    
+    background: url("../images/top-background-1.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#fix-pannel #dispo {
+    padding-top: 51px;
+    padding-left: 25px;
+    margin: 0;
+    
+    display: inline-block;
+    
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#fix-pannel #price2 {
+    padding-top: 51px;
+    padding-left: 142px;
+    padding-right: 26px;
+    margin: 0;
+    
+    display: inline-block;
+    
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#fix-pannel select {
+    margin-top: 20px;
+    margin-left: 26px;
+    padding: 0;
+    
+    width: 114px;
+    height: 50px;
+    
+    border: solid 1px #cccccc;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+}
+
+#fix-pannel #add2 {
+    width: 125px;
+    height: 50px;
+    
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    
+    background: #333333;
+    border: none;
+}
+
+#caract {
+    width: 100%;
+    height: 660px;
+    
+    background: url('../images/shoes.png');
+    
+    position: relative;
+    
+    z-index: 1;
+}
+
+#story {
+    position: absolute;
+    top: 108px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: bold;
+    color: #666666;
+}
+
+#origin {
+    position: absolute;
+    top: 129px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#origin-text {
+    position: absolute;
+    top: 175px;
+    left: 51px;
+    
+    width: 280px;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #666666;
+}
+
+#benef {
+    position: absolute;
+    top: 310px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: bold;
+    color: #666666;
+}
+
+#layer {
+    position: absolute;
+    top: 349px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#layer-text {
+    position: absolute;
+    top: 372px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #666666;
+}
+
+#inj {
+    position: absolute;
+    top: 404px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#inj-text {
+    position: absolute;
+    top: 427px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #666666;
+}
+
+#unit {
+    position: absolute;
+    top: 459px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#unit-text {
+    position: absolute;
+    top: 482px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #666666;
+}
+
+#rubber {
+    position: absolute;
+    top: 514px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#rubber-text {
+    position: absolute;
+    top: 537px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #666666;
+}
