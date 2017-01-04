@@ -556,3 +556,38 @@ header {
     font-size: 11px;
     color: #666666;
 }
+
+#bottom {
+    height: 660px;
+    width: 100%;
+    
+    position: relative;
+    
+    background: white;
+    
+    z-index: 3;
+}
+
+#social {
+    position: absolute;
+    
+    top: 109px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #666666;
+    font-weight: bold;
+}
+
+#htag {
+    position: absolute;
+    
+    top: 130px;
+    left: 51px;
+    
+    font-family: 'Roboto';
+    font-size: 17px;
+    color: #333333;
+    font-weight: bold;
+}
