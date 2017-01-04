@@ -26,8 +26,6 @@ header {
     background: white;
     position: relative;
     font-family: 'Roboto Condensed';
-    
-    z-index: 3;
 }
 
 #logo {
@@ -52,8 +50,7 @@ header {
     margin-top: 40px;
     margin-bottom: 40px;
     
-    padding-right: 40px;
-    
+    padding-right: 40px;    
 }
 
 #left li a {
@@ -93,6 +90,39 @@ header {
     margin-right: 40px;
 }
 
+#right li input {
+    border: 0;
+    text-align: right;
+    width: 50px;
+    
+    font-size: 10px;
+    font-weight: bold;
+    
+    margin-left: 20px;
+}
+
+#right li input:hover {
+    border: solid 1px black;
+    text-align: right;
+    width: 100px;
+    
+    font-size: 10px;
+    font-weight: bold;
+    
+    margin-left: 20px;
+}
+
+#right li input:focus {
+    border: solid 1px black;
+    text-align: right;
+    width: 100px;
+    
+    font-size: 10px;
+    font-weight: bold;
+    
+    margin-left: 20px;
+}
+
 #right li a {
     text-decoration: none;
     color: black;
@@ -109,8 +139,6 @@ header {
     position: relative;
     
     background: white;
-    
-    z-index: 3;
 }
 
 #product-left {
@@ -266,8 +294,6 @@ header {
     background: url("../images/middle.png") center no-repeat;
     
     position: relative;
-    
-    z-index: 1;
 }
 
 #middle-title {
@@ -301,8 +327,8 @@ header {
     
     background: white;
     
-    position: fixed;
-    top: 118px;
+    position: absolute;
+    top: 800px;
     right: 70px;
     
     float: right;
@@ -424,7 +450,6 @@ header {
     background: url('../images/shoes.png');
     
     position: relative;
-    
     z-index: 1;
 }
 
